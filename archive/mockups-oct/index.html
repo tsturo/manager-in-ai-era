@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>October mockups</title>
+<link rel="stylesheet" href="../deck.css">
+<style>
+  html, body { overflow: auto; height: auto; background: #d8dcde; }
+  .slide { position: relative; margin: 0 auto 60px; }
+  body.single { background: var(--white); overflow: hidden; }
+  body.single .slide { display: none; margin: 0; }
+  body.single .slide.on { display: block; }
+  .hidden { display: none; }
+
+  .ev.agent { background: #f2edff; }
+  .ev .chip { font-size: 21px; }
+  .was { font-size: 26px; color: #8a9399; margin-left: auto; }
+  .was s { text-decoration-thickness: 2px; }
+  .evening { position: absolute; left: 80px; white-space: nowrap; background: var(--white); padding: 0 24px 0 20px; font-family: "Visma Display"; font-weight: 600; font-size: 64px; letter-spacing: -0.02em; line-height: 1; }
+  .evening .i { font-family: "Visma Text"; font-weight: 400; }
+
+  .lanehead { position: absolute; white-space: nowrap; top: -44px; font-size: 20px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .deltas { position: absolute; left: 80px; top: 196px; display: flex; gap: 56px; font-size: 26px; color: #4a5156; }
+  .deltas b { font-family: "Visma Display"; font-weight: 600; font-size: 34px; color: var(--black); }
+  .deltas s { color: #8a9399; }
+  .bar { position: absolute; background: #f2edff; border-left: 4px solid var(--purple); padding: 2px 14px; font-size: 22px; font-weight: 600; overflow: hidden; white-space: nowrap; }
+  .ask { position: absolute; font-size: 26px; font-weight: 600; display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+  .ask b { color: var(--purple); }
+  .kpis { position: absolute; right: 80px; top: 112px; display: flex; gap: 48px; }
+  .kpis div { display: flex; align-items: center; gap: 14px; }
+  .kpis b { font-family: "Visma Display"; font-weight: 600; font-size: 72px; line-height: 1; letter-spacing: -0.03em; }
+  .kpis span { font-size: 22px; line-height: 1.25; }
+  .kpis span { color: #4a5156; }
+  .kpis s { color: #8a9399; text-decoration-thickness: 2px; }
+  .tint { position: absolute; top: 0; background: #faf8ff; }
+  .ev.touch { border: 3px solid var(--black); border-left-width: 6px; background: var(--white); align-items: center; }
+  .ev.agentc { background: #f2edff; border-left: 4px solid var(--purple); }
+  .ev .badge { margin-left: auto; width: 30px; height: 30px; border-radius: 50%; background: var(--black); color: var(--white); font-size: 18px; font-weight: 700; display: grid; place-items: center; flex: none; }
+  .runbar2 { position: absolute; background: #f2edff; border-top: 4px solid var(--purple); padding: 6px 10px; font-size: 19px; font-weight: 600; line-height: 1.15; overflow: hidden; }
+  .wires { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+  .wires .w { stroke: var(--purple); stroke-width: 2.5; fill: none; }
+  .wires .d { fill: var(--purple); }
+  .qs { position: absolute; font-size: 22px; font-weight: 600; line-height: 1.3; white-space: nowrap; }
+  .qs i { font-style: normal; color: var(--purple); margin-right: 8px; }
+  .eve2 { position: absolute; left: 100px; font-family: "Visma Display"; font-weight: 600; font-size: 68px; letter-spacing: -0.02em; line-height: 1; white-space: nowrap; background: var(--white); padding-right: 24px; }
+  .eve2 .i { font-family: "Visma Text"; font-weight: 400; }
+  .eve2 small { display: block; margin-top: 14px; font-family: "Visma Text"; font-size: 26px; font-style: italic; font-weight: 400; color: #4a5156; letter-spacing: 0; }
+</style>
+</head>
+<body>
+<div class="hidden"><div id="cal-jan"></div><div id="cal-oct"></div><div id="role-list"></div><svg id="bp"></svg><svg id="rig"></svg></div>
+
+<section class="slide" id="a">
+  <div class="top"><img src="../vendor/visma-logo.svg" alt="Visma"><span>A · Strict mirror</span></div>
+  <div class="daytitle d">13 October 2026 <span class="i">today, also a Tuesday</span></div>
+  <div class="cal" id="cal-a"></div>
+  <div class="side">
+    <div class="count"><span class="n d">2</span><span>unread emails</span><span class="was">was <s>11</s></span></div>
+    <div class="count"><span class="n d">0</span><span>snoozed in Slack</span><span class="was">was <s>7</s></span></div>
+    <div class="count"><span class="n d">6</span><span>tasks on the list</span><span class="was">was <s>19</s></span></div>
+    <div class="quote">&ldquo;Last time you said&hellip;&rdquo;<small>me, at the start of every 1:1</small></div>
+  </div>
+</section>
+
+<section class="slide" id="b">
+  <div class="top"><img src="../vendor/visma-logo.svg" alt="Visma"><span>B · Two lanes</span></div>
+  <div class="daytitle d">13 October 2026 <span class="i">today, also a Tuesday</span></div>
+  <div class="deltas"><span><b>2</b> unread <s>11</s></span><span><b>0</b> snoozed <s>7</s></span><span><b>6</b> tasks <s>19</s></span></div>
+  <div class="cal" id="cal-b" style="top:300px"></div>
+</section>
+
+<section class="slide" id="c">
+  <div class="top"><img src="../vendor/visma-logo.svg" alt="Visma"><span>05 · October</span></div>
+  <div class="daytitle d">13 October 2026 <span class="i">today, also a Tuesday</span></div>
+  <div class="kpis">
+    <div><b>2</b><span>unread<br>was <s>11</s></span></div>
+    <div><b>0</b><span>snoozed<br>was <s>7</s></span></div>
+    <div><b>6</b><span>tasks<br>was <s>19</s></span></div>
+  </div>
+  <div class="cal" id="cal-c" style="top:290px"></div>
+</section>
+
+<script src="../slides.js"></script>
+<script src="mockups.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+@import url("../vendor/fonts/fonts.css");
+
+:root {
+  --black: #131313;
+  --white: #fefefe;
+  --purple: #7f56fa;
+  --grey: #b9c4c9;
+  --hair: #e7ebec;
+  --mute: #6b7378;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #d8dcde; }
+body { font-family: "Visma Text", sans-serif; color: var(--black); }
+body.single { background: var(--white); overflow: hidden; }
+
+.slide {
+  position: relative; width: 1920px; height: 1080px; overflow: hidden;
+  background: var(--white); margin: 0 auto 60px; padding: 0;
+}
+body.single .slide { display: none; margin: 0; }
+body.single .slide.on { display: block; }
+
+.top { position: absolute; left: 80px; right: 80px; top: 56px; display: flex; justify-content: space-between; align-items: center; font-size: 22px; color: var(--mute); }
+.top img { height: 30px; }
+.top .tri { color: var(--black); margin-right: 10px; }
+.dark .top { color: var(--grey); }
+.dark .top img { filter: invert(1); }
+.dark { background: var(--black); color: var(--white); }
+
+.d { font-family: "Visma Display", sans-serif; letter-spacing: -0.02em; }
+.i { font-style: italic; }
+.p { color: var(--purple); }
+.m { color: var(--mute); }
+.amp::before { content: "\25B8\00a0"; color: var(--purple); font-size: 0.5em; vertical-align: 0.25em; }
+.amp::after { content: "\00a0\25C2"; color: var(--purple); font-size: 0.5em; vertical-align: 0.25em; }
+
+/* 1 cover */
+.cover .name { position: absolute; left: 80px; top: 200px; font-size: 30px; }
+.cover .big { position: absolute; left: 70px; top: 260px; font-weight: 600; font-size: 230px; line-height: 1.1; }
+.cover .big .vs { font-family: "Visma Text"; font-style: italic; font-weight: 400; font-size: 70px; letter-spacing: 0; margin: 0 10px 0 16px; vertical-align: 0.6em; }
+.cover .big .jan { color: #8a9399; }
+.cover .amp::before { content: none; }
+.cover .sub { position: absolute; left: 80px; bottom: 110px; width: 1100px; font-size: 44px; line-height: 1.25; }
+.cover .meta { position: absolute; right: 80px; bottom: 116px; text-align: right; font-size: 28px; line-height: 1.6; color: var(--mute); }
+
+/* calendar */
+.cal { position: absolute; left: 80px; top: 240px; }
+.cal .hours { position: absolute; left: 0; top: 0; width: 70px; }
+.cal .hours span { position: absolute; left: 0; font-size: 20px; color: var(--mute); transform: translateY(-50%); }
+.cal .grid { position: absolute; left: 80px; top: 0; border-top: 1px solid var(--hair); }
+.cal .line { position: absolute; left: 0; right: 0; border-top: 1px solid var(--hair); }
+.ev { position: absolute; padding: 2px 14px; font-size: 24px; line-height: 1.15; border-left: 4px solid var(--black); background: #f3f5f6; overflow: hidden; display: flex; gap: 14px; align-items: baseline; }
+.ev b { font-weight: 600; white-space: nowrap; }
+.ev em { font-size: 22px; color: #4a5257; white-space: nowrap; }
+.ev.slot { background: var(--white); border: 2px dashed var(--grey); color: var(--mute); }
+.ev.slot b { text-decoration: line-through; font-weight: 500; }
+.ev.over { background: var(--black); color: var(--white); border-left-color: var(--black); }
+.ev.over em { color: var(--grey); }
+.ev.agent { background: transparent; border-left: 4px solid var(--purple); color: var(--black); }
+.chip { margin-left: auto; font-size: 20px; color: var(--purple); white-space: nowrap; font-weight: 600; }
+.colhead { position: absolute; top: -44px; font-size: 20px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.runbar { position: absolute; width: 14px; background: var(--purple); }
+.runlabel { position: absolute; font-size: 22px; color: var(--purple); font-weight: 600; white-space: nowrap; }
+.ping { position: absolute; white-space: nowrap; display: flex; align-items: center; gap: 10px; font-size: 19px; }
+.ping i { width: 16px; height: 16px; border-radius: 50%; background: var(--purple); display: block; border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--purple); }
+
+.daytitle { position: absolute; left: 80px; top: 110px; font-size: 64px; font-weight: 600; }
+.daytitle .i { font-family: "Visma Text"; font-weight: 400; font-size: 40px; letter-spacing: 0; color: var(--mute); }
+
+.side { position: absolute; right: 80px; top: 240px; width: 620px; }
+.count { border-top: 2px solid var(--black); padding: 18px 0 26px; display: flex; align-items: baseline; gap: 22px; }
+.count .n { font-family: "Visma Display"; font-weight: 600; font-size: 120px; line-height: 0.9; letter-spacing: -0.03em; }
+.count span { font-size: 28px; }
+.quote { margin-top: 30px; font-size: 40px; line-height: 1.2; font-style: italic; }
+.quote small { display: block; font-size: 22px; font-style: normal; color: var(--mute); margin-top: 14px; }
+
+/* roles */
+.roles { position: absolute; left: 80px; top: 170px; right: 80px; }
+.role { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 28px; border-top: 1px solid var(--hair); padding: 10px 0 8px; }
+.role .no { font-size: 20px; color: var(--mute); font-variant-numeric: tabular-nums; }
+.role .t { font-family: "Visma Display"; font-weight: 600; font-size: 54px; letter-spacing: -0.02em; white-space: nowrap; }
+.role .x { font-size: 32px; font-style: italic; color: #4a5156; }
+.role.last { margin-top: 32px; border-top: 2px solid var(--black); }
+.role.last .t { font-family: "Visma Text"; font-weight: 700; }
+
+/* pensieve */
+.pensieve > img { position: absolute; left: 80px; top: 230px; width: 960px; height: 543px; object-fit: cover; }
+.pensieve .cap { position: absolute; left: 80px; top: 800px; font-size: 24px; color: var(--grey); }
+.pensieve .txt { position: absolute; left: 1120px; top: 230px; width: 720px; height: 543px; display: flex; flex-direction: column; justify-content: center; }
+.pensieve h2 { font-family: "Visma Display"; font-weight: 600; font-size: 84px; line-height: 0.98; letter-spacing: -0.02em; margin: 0 0 40px; }
+.pensieve h2 .i { font-family: "Visma Text"; font-weight: 400; }
+.pensieve p { font-size: 30px; line-height: 1.4; margin: 0 0 26px; color: #d9dee0; }
+.pensieve p b { color: var(--white); }
+
+/* october side */
+.side .state { font-family: "Visma Display"; font-weight: 600; font-size: 76px; line-height: 1; letter-spacing: -0.02em; margin: 0 0 40px; }
+.side .state .i { font-family: "Visma Text"; font-weight: 400; }
+.small-count { border-top: 1px solid var(--black); padding: 14px 0; font-size: 28px; display: flex; gap: 16px; align-items: baseline; }
+.small-count b { font-family: "Visma Display"; font-size: 54px; font-weight: 600; min-width: 80px; }
+
+/* trust */
+.trust h1 { position: absolute; left: 80px; top: 150px; margin: 0; font-family: "Visma Display"; font-weight: 600; font-size: 150px; letter-spacing: -0.03em; line-height: 1; }
+.trust h1 .i { font-family: "Visma Text"; font-weight: 400; }
+.rules { position: absolute; left: 80px; right: 80px; top: 420px; }
+.rule { display: grid; grid-template-columns: 760px 1fr; align-items: baseline; border-top: 2px solid var(--black); padding: 30px 0 38px; }
+.rule h3 { margin: 0; font-family: "Visma Display"; font-size: 56px; font-weight: 600; letter-spacing: -0.02em; }
+.rule p { margin: 0; font-size: 32px; line-height: 1.35; font-style: italic; color: var(--black); }
+
+/* bpmn */
+.bpmn h2 { position: absolute; left: 80px; top: 120px; margin: 0; font-family: "Visma Display"; font-weight: 600; font-size: 64px; letter-spacing: -0.02em; }
+.bpmn h2 .i { font-family: "Visma Text"; font-weight: 400; font-size: 44px; color: var(--mute); letter-spacing: 0; }
+.bpmn svg { position: absolute; left: 80px; top: 250px; }
+.bpmn svg text { font-family: "Visma Text"; font-size: 23px; fill: var(--black); }
+.bpmn .ltitle { font-size: 20px; font-weight: 600; }
+.bpmn .q { font-style: italic; fill: var(--purple); font-weight: 600; }
+.bpmn .s { fill: var(--white); stroke: var(--black); stroke-width: 2; }
+.bpmn .f { fill: none; stroke: var(--black); stroke-width: 2; }
+.bpmn .msg { fill: none; stroke: var(--black); stroke-width: 2; stroke-dasharray: 8 6; }
+.bpmn .pool { fill: none; stroke: var(--black); stroke-width: 2; }
+.bpmn .lane { fill: none; stroke: var(--hair); stroke-width: 2; }
+.bpmn .ptitle { font-size: 18px; font-weight: 600; letter-spacing: 0.1em; }
+.bpmn .jan .s, .bpmn .jan .f { stroke: #8a9399; }
+.bpmn .jan text { fill: #5d666b; }
+.bpmn .tok { fill: var(--purple); stroke: var(--white); stroke-width: 4; }
+.bpmn .tok.g { fill: #8a9399; }
+.bpmn .run { fill: #f2edff; stroke: var(--purple); stroke-width: 2; }
+.free { position: absolute; left: 80px; white-space: nowrap; background: var(--white); padding: 0 24px 0 20px; font-family: "Visma Display"; font-weight: 600; font-size: 44px; letter-spacing: -0.02em; }
+.free .i { font-family: "Visma Text"; font-weight: 400; }
+.ev.short { line-height: 1.2; align-items: center; }
